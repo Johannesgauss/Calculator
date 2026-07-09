@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
+    "run": "tsx main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +24,7 @@
     "inquirer": "^14.0.2"
   },
   "devDependencies": {
+    "tsx": "^4.23.0",
     "typescript": "^6.0.3"
   }
 }
