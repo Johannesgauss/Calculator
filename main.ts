@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
-import Calculator from './Calculator.ts'
+import { Calculator } from './Calculator.ts'
 
 const calculator = new Calculator(undefined, "", undefined);
 
@@ -8,7 +8,7 @@ async function main() {
     try {
         const menu = await inquirer.prompt([
             {
-                type: 'list',
+                type: 'select',
                 name: 'action',
                 message: 'O que desejas fazer?',
                 choices: [
@@ -42,7 +42,7 @@ async function main() {
             case 'Definir operador':
                 const opAnswer = await inquirer.prompt([
                     {
-                        type: 'list',
+                        type: 'select',
                         name: 'operator',
                         message: 'Escolha a operação:',
                         choices: ['+', '-', '*', '/']
